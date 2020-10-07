@@ -560,7 +560,7 @@ Implications of L2-regularization on:
   	sdb = sdb / (1 - beta2^t)      # fixing bias
   					
   	W = W - learning_rate * vdW / (sqrt(sdW) + epsilon)
-  	b = B - learning_rate * vdb / (sqrt(sdb) + epsilon)
+  	b = b - learning_rate * vdb / (sqrt(sdb) + epsilon)
   ```
 - Hyperparameters for Adam:
   - Learning rate: needed to be tuned.

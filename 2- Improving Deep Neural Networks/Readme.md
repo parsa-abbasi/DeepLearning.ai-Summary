@@ -575,10 +575,10 @@ Implications of L2-regularization on:
 - One technique equations is`learning_rate = (1 / (1 + decay_rate * epoch_num)) * learning_rate_0`  
   - `epoch_num` is over all data (not a single mini-batch).
 - Other learning rate decay methods (continuous):
-  - `learning_rate = (0.95 ^ epoch_num) * learning_rate_0`
-  - `learning_rate = (k / sqrt(epoch_num)) * learning_rate_0`
+  - `learning_rate = (0.95 ^ epoch_num) * learning_rate_0` (Exponentially decay)
+  - `learning_rate = (k / sqrt(epoch_num)) * learning_rate_0` or `learning_rate = (k / sqrt(t)) * learning_rate_0`
 - Some people perform learning rate decay discretely - repeatedly decrease after some number of epochs.
-- Some people are making changes to the learning rate manually.
+- Some people are making changes to the learning rate manually. Specifically when they're training just one model at a time, and if the model takes many hours, or even many days to train.
 - `decay_rate` is another `hyperparameter`.
 - For Andrew Ng, learning rate decay has less priority.
 

@@ -34,6 +34,7 @@ This is the second course of the deep learning specialization at [Coursera](http
       * [Adam optimization algorithm](#adam-optimization-algorithm)
       * [Learning rate decay](#learning-rate-decay)
       * [The problem of local optima](#the-problem-of-local-optima)
+      * [Optimization algorithms summary](#optimization-algorithms-summary)
    * [Hyperparameter tuning, Batch Normalization and Programming Frameworks](#hyperparameter-tuning-batch-normalization-and-programming-frameworks)
       * [Tuning process](#tuning-process)
       * [Using an appropriate scale to pick hyperparameters](#using-an-appropriate-scale-to-pick-hyperparameters)
@@ -590,7 +591,23 @@ Implications of L2-regularization on:
   - Plateau is a region where the derivative is close to zero for a long time.
   - This is where algorithms like momentum, RMSprop or Adam can help.
 
+### Optimization algorithms summary
 
+#### Gradient Descent
+**What you should remember:**
+  - The difference between gradient descent, mini-batch gradient descent and stochastic gradient descent is the number of examples you use to perform one update step.
+  - You have to tune a learning rate hyperparameter *alpha*.
+  - With a well-turned mini-batch size, usually it outperforms either gradient descent or stochastic gradient descent (particularly when the training set is large).
+  
+#### Mini-Batch Gradient descent
+**What you should remember:**
+  - Shuffling and Partitioning are the two steps required to build mini-batches
+  - Powers of two are often chosen to be the mini-batch size, e.g., 16, 32, 64, 128.
+  
+#### Momentum
+**What you should remember:**
+  - Momentum takes past gradients into account to smooth out the steps of gradient descent. It can be applied with batch gradient descent, mini-batch gradient descent or stochastic gradient descent.
+  - You have to tune a momentum hyperparameter *beta* and a learning rate *alpha* .
 
 ## Hyperparameter tuning, Batch Normalization and Programming Frameworks
 

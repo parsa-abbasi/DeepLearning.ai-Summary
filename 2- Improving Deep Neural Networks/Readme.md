@@ -693,6 +693,7 @@ Implications of L2-regularization on:
 - If you are using a deep learning framework, you won't have to implement batch norm yourself:
   - Ex. in Tensorflow you can add this line: `tf.nn.batch-normalization()`
 - Batch normalization is usually applied with mini-batches.
+  - You'll do the same steps, but you would be normalizing *Z_tilde* using just the data in your current mini-batch.
 - If we are using batch normalization parameters `b[1]`, ..., `b[L]` doesn't count because they will be eliminated after mean subtraction step, so:
   ```
   Z[l] = W[l]A[l-1] + b[l] => Z[l] = W[l]A[l-1]
